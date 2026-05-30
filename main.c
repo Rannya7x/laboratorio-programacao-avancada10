@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "sniff_utils.h"
 
 int main(int argc, char **argv[]) {
     //valida argumentos
@@ -9,7 +10,7 @@ int main(int argc, char **argv[]) {
     }
 
     //abre arquivo
-    FILE *arquivo = fopen(argv[1], "rb");
+    FILE *arquivo = fopen(*argv[1], "rb");
     if (arquivo == NULL){
         perror("Erro ao abrir o arquivo");
         return 1;
