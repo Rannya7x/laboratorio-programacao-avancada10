@@ -2,6 +2,7 @@
 #define SNIFF_UTILS_H
 
 #include <stdint.h>
+#include <stdio.h>
 
 //camada de enlace ethernet
 typedef struct {
@@ -37,5 +38,7 @@ typedef struct {
     uint16_t check; // Checksum
     uint16_t urg_ptr; // Urgente
 } tcp_hdr_t;
+
+void processar_dados_rede(FILE *arquivo);
 
 #endif 
